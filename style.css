@@ -23,10 +23,17 @@
     --secondary: #ED5338;
 }
 
+/* To remove default generated style */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
 /* General code */
 body {
     background-color: #121212;
-    padding: 15px;
 }
 
 /* html{
@@ -38,17 +45,16 @@ body {
 h1 {
     font-family: "GothamBold", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 23px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 10px;
 }
 
 h2 {
     font-family: "GothamLight", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 23px;
-    line-height: 24px;
-    margin-left: 75px;
-    margin-top: -19px;
+    font-size: 20px;
+    line-height: 22px;
 }
 
 p {
@@ -66,8 +72,9 @@ p {
 	max-height: 35px;
     width: 50%;
     display: block;
-	margin-left: auto;
-	margin-right: auto;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -84,18 +91,41 @@ p {
 }
 
 /* Applying the grid */
-.data- {
+.data-info {
     grid-column: 1 / span 12;
 }
 
 section {
-    background-color: #FFFFFF;
+    background-color:rgb(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+#map {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
 
+#search-box {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin : 0 auto;
+    margin-top: 5px;
+    padding: 6px 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: #C2C8CC;
 
+    font-size: 16px;
+    color: var(--secondary);
+	text-align: center;
+}
 
 
 
