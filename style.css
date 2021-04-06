@@ -123,29 +123,48 @@ section {
     background-color: #C2C8CC;
 
     font-size: 16px;
-    color: var(--secondary);
+    color: #000000;
 	text-align: center;
 }
 
 #city {
-    margin-bottom: 5px;
+    font-family: "GothamBold", Helvetica, sans-serif;
     font-size: 16px;
     color: var(--secondary);
-	text-align: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.temp {
+    font-family: "GothamLight", Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 25px;
 }
 
 #temp {
-    margin: 5px 0px;
     font-size: 16px;
     color: var(--secondary);
-	text-align: center;
+}
+
+#tempFeel {
+    font-size: 12px;
+    color: var(--secondary);
 }
 
 #weather {
-    margin-bottom: 5px;
+    font-family: "GothamLight", Helvetica, sans-serif;
     font-size: 16px;
     color: var(--secondary);
-	text-align: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.wind {
+    font-family: "GothamLight", Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--secondary);
+    text-align: center;
+    margin-top: 25px;
 }
 
 
@@ -158,8 +177,19 @@ section {
         grid-row-gap: 20px;
     }
 
+    .data-info {
+        grid-column: 2 / span 10;
+    }
+
     section {
         padding: 13px;
+    }
+
+    #search-box {
+        width: 250px;
+        margin-top: 10px;
+        padding: 6px 15px;
+        font-size: 16px;
     }
 }
 
@@ -167,6 +197,10 @@ section {
 @media (min-width: 768px) {
     .dashboard-API {
         grid-gap: 30px;
+    }
+
+    .data-info {
+        grid-column: 3 / span 8;
     }
 
     section {
@@ -200,6 +234,10 @@ section {
         margin-left: auto;
 		margin-right: auto;
 		max-width: 2560px;
+    }
+
+    .data-info {
+        grid-column: 4 / span 6;
     }
 
     section {
