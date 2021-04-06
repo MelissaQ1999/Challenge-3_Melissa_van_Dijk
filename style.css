@@ -47,7 +47,7 @@ h1 {
     color: var(--primary);
     font-size: 20px;
     line-height: 22px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 h2 {
@@ -88,6 +88,8 @@ p {
     grid-auto-rows: auto auto;
     grid-auto-columns: auto auto;
     padding-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Applying the grid */
@@ -99,17 +101,18 @@ section {
     background-color:rgb(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
+/* The code for the map */
 #map {
     width: 100vw;
     height: 100vh;
     position: absolute;
+    margin: 0px;
     z-index: -1;
 }
 
+/* The search box code */
 #search-box {
     width: 80%;
     position: relative;
@@ -127,18 +130,19 @@ section {
 	text-align: center;
 }
 
+/* The code for weather data */
 #city {
     font-family: "GothamBold", Helvetica, sans-serif;
     font-size: 16px;
     color: var(--secondary);
     text-align: center;
-    margin-top: 25px;
+    margin-top: 28px;
 }
 
 .temp {
     font-family: "GothamLight", Helvetica, sans-serif;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 #temp {
@@ -156,7 +160,6 @@ section {
     font-size: 16px;
     color: var(--secondary);
     text-align: center;
-    margin-top: 25px;
 }
 
 .wind {
@@ -164,7 +167,11 @@ section {
     font-size: 16px;
     color: var(--secondary);
     text-align: center;
-    margin-top: 25px;
+    margin-bottom: 2px;
+}
+
+#weather, .wind {
+    margin-top: 22px;
 }
 
 
@@ -173,6 +180,11 @@ section {
 
 /* Intermediate version of mobile and tablet (450px) */
 @media (min-width: 450px) {
+    h1 {
+        font-size: 140%;
+        line-height: 26px;
+    }
+
     .dashboard-API {
         grid-row-gap: 20px;
     }
@@ -187,14 +199,17 @@ section {
 
     #search-box {
         width: 250px;
-        margin-top: 10px;
-        padding: 6px 15px;
-        font-size: 16px;
+        padding: 8px 15px;
     }
 }
 
 /* Tablet version (768px) */
 @media (min-width: 768px) {
+    h1 {
+        font-size: 175%;
+        line-height: 30px;
+    }
+
     .dashboard-API {
         grid-gap: 30px;
     }
@@ -206,41 +221,121 @@ section {
     section {
         padding: 20px;
     }
+
+    #search-box {
+        margin-top: 12px;
+        font-size: 18px;
+    }
+
+    #city {
+        margin-top: 30px;
+    }
+
+    .temp {
+        margin-top: 32px;
+    }
+
+    #weather, .wind {
+        margin-top: 24px;
+    }
+
+    #city, #temp, #weather, .wind {
+        font-size: 18px;
+    }
+
+    #tempFeel {
+        font-size: 14px;
+    }
 }
 
 /* Laptop version (1024px) */
 @media (min-width: 1024px) {
+    h1 {
+        text-align: center;
+    }
+
     .dashboard-API {
         grid-gap: 35px;
+    }
+
+    #city, .temp, #weather, .wind {
+        margin-top: 30px;
+    }
+
+    #city {
+        margin-top: 34px;
+    }
+
+    .temp {
+        margin-top: 36px;
+    }
+
+    #weather, .wind {
+        margin-top: 28px;
     }
 }
 
 /* Bigger laptop version (1280px) */
 @media (min-width: 1280PX) {
+    h1 {
+        font-size: 190%;
+    }
+
     section {
         padding: 30px;
+    }
+
+    #search-box {
+        margin-top: 15px;
+        padding: 10px 15px;
     }
 }
 
 /* Intermediate version of laptop and desktop (1680px) */
 @media (min-width: 1680PX) {
 
+    h1 {
+        font-size: 225%;
+        line-height: 40px;
+    }
+
+    #search-box {
+        width: 300px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    #city {
+        margin-top: 40px;
+    }
+
+    .temp {
+        margin-top: 42px;
+    }
+
+    #weather, .wind {
+        margin-top: 34px;
+    }
+
+    #city, #temp, #weather, .wind {
+        font-size: 20px;
+    }
+
+    #tempFeel {
+        font-size: 16px;
+    }
 }
 
 /* Desktop version (1920px) */
 @media (min-width: 1920PX) {
     .dashboard-API {
         grid-gap: 45px;
-        margin-left: auto;
-		margin-right: auto;
+        /* margin-left: auto;
+		margin-right: auto; */
 		max-width: 2560px;
     }
 
     .data-info {
         grid-column: 4 / span 6;
-    }
-
-    section {
-        padding: 45px;
     }
 }
